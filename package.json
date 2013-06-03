@@ -6,7 +6,8 @@
   "dependencies": {
     "sails": "*",
     "optimist": "*",
-    "normalize-css": "*"
+    "normalize-css": "*",
+    "backbone": "*"
   },
   "scripts": {
     "start": "node app.js",
