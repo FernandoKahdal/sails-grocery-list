@@ -12,12 +12,21 @@ requirejs.config({
   paths: {
     backbone: '../../lib/backbone',
     underscore: '../../lib/underscore',
-    jquery: '../../lib/jquery',
+    jquery: '../../lib/jquery'
   }
 });
 
-require(['backbone','router/app-router'],
-function (Backbone,AppRouter){
+require(['backbone','router/app-router','collection/nav-collection','view/navigation-view'],
+function (Backbone,AppRouter,NavCollection,NavigationView) {
+  var links = new NavCollection([
+    {href: '#lists', text: 'Lists'},
+    {href: '#profile', text: 'Profile'}
+  ]);
+  var navView = new NavigationView({
+    collection: links
+  });
   var router = new AppRouter();
-  Backbone.history.start({pushState: true});
+  Backbone.history.start();
+
+  navView.render();
 });
