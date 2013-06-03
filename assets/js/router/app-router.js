@@ -2,9 +2,18 @@ define(['backbone'],
 function (Backbone) {
   return Backbone.Router.extend({
     routes: {
-      'list': 'list'
+      '': '',
+      'lists': 'lists',
+      'profile': 'profile'
     },
-    list: function() {
+    '': function() {
+      console.log('root route');
+    },
+    lists: function() {
+      console.log('lists');
+    },
+    profile: function() {
+      console.log('profile');
     }
   });
 });

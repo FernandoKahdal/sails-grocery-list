@@ -1,0 +1,12 @@
+#navigation {
+  display: inline-block;
+}
+
+.nav-item {
+  display: inline-block;
+  font-size: 2.0em;
+}
+
+.nav-item * {
+  text-decoration: none;
+}

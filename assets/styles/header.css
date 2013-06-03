@@ -1,0 +1,18 @@
+#header {
+  display: inline-block;
+}
+
+#header a {
+  text-decoration: none;
+  padding: .25em;
+  color: #7f3f7f;
+}
+
+#header a:hover {
+  background-color: #7f3f7f;
+  color: #efefef;
+}
+
+#header h1 {
+  display: inline-block;
+}
