@@ -1,0 +1,19 @@
+{
+  "name": "sails-grocery-list",
+  "private": true,
+  "version": "0.0.1",
+  "description": "a Sails application",
+  "dependencies": {
+    "sails": "*",
+    "optimist": "*",
+    "normalize-css": "*"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node debug app.js"
+  },
+  "main": "app.js",
+  "repository": "",
+  "author": "",
+  "license": "MIT"
+}
