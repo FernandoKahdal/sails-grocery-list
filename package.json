@@ -14,7 +14,7 @@
     "debug": "node debug app.js"
   },
   "main": "app.js",
-  "repository": "",
-  "author": "",
+  "repository": "git://github.com/chrisbroome/sails-grocery-list",
+  "author": "Christopher Broome",
   "license": "MIT"
 }
