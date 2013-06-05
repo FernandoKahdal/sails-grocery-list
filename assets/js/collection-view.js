@@ -1,15 +1,15 @@
-define(['backbone', 'view/nav-item-view'],
-function(Backbone, NavItemView) {
+define(['backbone'],
+function(Backbone) {
+  var emptyView = Backbone.View.extend({});
   return Backbone.View.extend({
-    className: 'navbar',
-    tagName: 'ul',
     initialize: function initialize() {
+      this.itemView = this.itemView || emptyView;
       this.listenTo(this.collection, 'change', this.render);
     },
     render: function render() {
       this.$el.empty();
       this.collection.each(function(model) {
-        this.$el.append(new NavItemView({model: model}).render().el);
+        this.$el.append(new this.itemView({model: model}).render().el);
       }, this);
       return this;
     }

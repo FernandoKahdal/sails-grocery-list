@@ -5,7 +5,7 @@
 module.exports = {
 	attributes	: {
 		name: 'STRING',
-		company_id: {
+		companyId: {
 		  type: 'INT',
       defaultsTo: null
 		}

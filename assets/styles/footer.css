@@ -1,0 +1,12 @@
+#footer {
+  position: fixed;
+  bottom: 0;
+  background-color: slategrey;
+  color: whitesmoke;
+  text-shadow: 0 1px rgba(255,255,255,.2);
+  padding: 1em;
+  width: 100%;
+}
+#footer a {
+  color: whitesmoke;
+}

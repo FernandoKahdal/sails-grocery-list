@@ -5,7 +5,7 @@
 module.exports = {
 	attributes	: {
 		name: 'STRING',
-		store_id: {
+		storeId: {
 		  type: 'INT',
 		  defaultsTo: null
 		}

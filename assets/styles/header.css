@@ -1,16 +1,21 @@
 #header {
-  display: inline-block;
+  background-color: darkcyan;
 }
 
 #header a {
   text-decoration: none;
-  padding: .25em;
-  color: #7f3f7f;
+  color: whitesmoke;
+  text-shadow: .05em .05em darkgreen;
+  display: inline-block;
+  height: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
 }
 
 #header a:hover {
-  background-color: #7f3f7f;
-  color: #efefef;
+  background-color: rgba(255,255,255,.8);
+  color: darkcyan;
+  text-shadow: .05em .05em darkgreen;
 }
 
 #header h1 {

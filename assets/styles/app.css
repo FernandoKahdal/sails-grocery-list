@@ -4,10 +4,26 @@ body {
   background: #e7e7e7;
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+  background-color: #ffffef;
   color: #6d6d6d
 }
 
-h1,h2,h3,h4,h5,h6,nav,ul,li {
+h1,h2,h3,h4,h5,h6,nav li {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #6d6d6d;
+}
+a:hover {
+  text-decoration: underline;
+  color: #6d6d6d;
 }

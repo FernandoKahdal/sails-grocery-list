@@ -1,19 +1,43 @@
-define(['backbone'],
-function (Backbone) {
+define(['backbone', 'collection/stores', 'collection/lists', 'view/stores', 'view/lists'],
+function (Backbone, Stores, Lists, StoresView, ListsView) {
+  var collections = {
+    stores: new Stores([
+      {id: 1, name: 'Giant'},
+      {id: 2, name: 'Safeway'},
+      {id: 3, name: 'Target'}
+    ]),
+    lists: new Lists([
+      {id: 1, name: 'Giant List', storeId: 1},
+      {id: 2, name: 'Safeway List', storeId: 2},
+      {id: 3, name: 'Alternate List', storeId: 2},
+      {id: 4, name: 'Party Favors', storeId: 3}
+    ])
+  }
+  var $content = $('#content');
   return Backbone.Router.extend({
     routes: {
       '': '',
-      'lists': 'lists',
-      'profile': 'profile'
+      'lists(/:id)': 'lists',
+      'stores(/:id)': 'stores'
     },
     '': function() {
-      console.log('root route');
+      $content.empty();
     },
-    lists: function() {
-      console.log('lists');
+    lists: function(id) {
+      $content.empty();
+      if( id === null ) {
+        var view = new ListsView({collection: collections.lists});
+        $content.html(view.render().el);
+      } else {
+      }
     },
-    profile: function() {
-      console.log('profile');
+    stores: function(id) {
+      $content.empty();
+      if( id === null ) {
+        var view = new StoresView({collection: collections.stores});
+        $content.html(view.render().el);
+      } else {
+      }
     }
   });
 });

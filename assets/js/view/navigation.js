@@ -1,4 +1,4 @@
-define(['backbone', 'view/nav-view'],
+define(['backbone', 'view/navs'],
 function(Backbone, NavView) {
   return Backbone.View.extend({
     el: $('#navigation'),

@@ -16,11 +16,11 @@ requirejs.config({
   }
 });
 
-require(['backbone','router/app-router','collection/nav-collection','view/navigation-view'],
+require(['backbone','router/app-router','collection/navs','view/navigation'],
 function (Backbone,AppRouter,NavCollection,NavigationView) {
   var links = new NavCollection([
     {href: '#lists', text: 'Lists'},
-    {href: '#profile', text: 'Profile'}
+    {href: '#stores', text: 'Stores'}
   ]);
   var navView = new NavigationView({
     collection: links
